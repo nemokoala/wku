@@ -16,7 +16,7 @@ body {
     width: 100vw;
     height: 100vh;
     font-size: 0;
-    background: rgb(189, 189, 189);
+    background: whitesmoke;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
 }
@@ -97,9 +97,31 @@ body {
 }
 
 .buttonArea {
-    width: 100%;
+    width: 90%;
+    margin-left:5%;
     height: calc(100vh - (80px + 45vh));
-    background:yellow;
+    background:whitesmoke;
+    overflow-y:scroll;
+    
+}
+
+.buttonArea button {
+    background: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 1rem;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.shortcut { /*long button*/
+    width: 100%;
+    background: white;
+    color: black;
+    border: 1px solid black;
+    font-size: 1rem;
+    
 }
 
 
