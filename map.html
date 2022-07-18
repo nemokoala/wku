@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" user-scalable=no>
+    <meta name="naver-site-verification" content="b0c123eee2028aad59ee6ffc8b901cfc50bc69f3"/>
+    <title>원광대학교 건물, 비상벨 위치 검색</title>
+    <link rel="stylesheet" href="map.css">
+</head>
+
+<body onload="setCenter(1500)">
+    <section>
+<!-- 지도를 표시할 div 입니다 -->
+<div id="map"></div>
+<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=853cabe7a0f75907f90d47b19fb49f83"></script>
+<script src="map.js"></script>
+<div class="explainArea">빨간색 화살표 클릭 시 해당 위치로 길찾기를 실행합니다</div>
+<div class="mapArea"></div>
+<img src="wku.png" id="logo">
+<div id="모드버튼">
+<button id="지도버튼" onclick="setNormalMap()">지도</button>
+<button id="스카이뷰버튼" onclick="setSkyMap()">스카이뷰</button>
+<button id="스카이뷰버튼" class="locationBtn" onclick="findMyLocation()">내위치</button>
+</div>
+<div class="search">
+    <a href="index.html"><button id="searchButton"><span id="비상벨">홈으로</span></button></a>
+    <a href="#target기타"><button id="searchButton"><span id="기타">기타</span></button></a>
+    <a href="#targetㄱ"><button id="searchButton">ㄱ</button></a>
+    <a href="#targetㄴ,ㄷ"><button id="searchButton">ㄴ,ㄷ</button></a>
+    <a href="#targetㅁ,ㅂ"><button id="searchButton">ㅁ,ㅂ</button></a>
+    <a href="#targetㅅ"><button id="searchButton">ㅅ</button></a>
+    <a href="#targetㅇ"><button id="searchButton">ㅇ</button></a>
+    <a href="#targetㅈ"><button id="searchButton">ㅈ</button></a>
+    <a href="#targetㅊ"><button id="searchButton">ㅊ</button></a>
+    <a href="#targetㅍ,ㅎ"><button id="searchButton">ㅍ,ㅎ</button></a>
+</div><br>
+<div class="buttonArea">
+<div id="getButton" class="button">
+
+<button id="기타버튼" class="shortcut">*</button><span id="target기타" class="hreftarget" >.</span>
+
+<button id="생활과학대학" onclick="createMarker(35.970154,126.953914,'(구)생활과학대학'
+)">(구)생활과학대학</button>
+
+
+<button id="제2미술관" onclick="createMarker(35.9675893,126.9532931,'제2미술관'
+)">(구)제2미술관</button>
+
+
+<button id="(구)평생교육원" onclick="createMarker(35.9667007,126.961209,'(구)평생교육원'
+)">(구)평생교육원</button>
+
+
+<button id="60주년기념관(평생교육원)" onclick="createMarker(35.9658951,126.9544319,'60주년기념관(평생교육원)'
+)">60주년기념관(평생교육원)</button>
+
+<button id="WM관" onclick="createMarker(35.970359,126.954892,'WM관'
+)">WM관</button>
+
+<button id="ㄱ" class="shortcut">ㄱ</button><span id="targetㄱ" class="hreftarget" >.</span>
+
+<button id="개벽관" onclick="createMarker(35.972862,126.957126,'개벽관'
+)">개벽관</button>
+
+<button id="경영대학" onclick="createMarker(35.9709974,126.9575541,'경영대학'
+)">경영대학</button>
+
+<button id="경영대학 신관" onclick="createMarker(35.970693,126.957850,'경영대학 신관'
+)">경영대학 신관</button>
+
+<button id="공공정책대학" onclick="createMarker(35.9688115,126.9563206,'공공정책대학'
+)">공공정책대학</button>
+
+<button id="교학대학" onclick="createMarker(35.970788422957426,126.95524608542802,'교학대학'
+)">교학대학</button>
+
+<button id="글로벌교류센터" onclick="createMarker(35.972075,126.957516,'글로벌교류센터'
+)">글로벌교류센터</button>
+
+<button id="ㄴ,ㄷ" class="shortcut">ㄴ,ㄷ</button><span id="targetㄴ,ㄷ" class="hreftarget" >.</span>
+
+<button id="남문" onclick="createMarker(35.964432,126.957753,'남문'
+)">남문</button>
+
+<button id="노천극장" onclick="createMarker(35.967694,126.954815,'노천극장'
+)">노천극장</button>
+
+<button id="농식품융합대학" onclick="createMarker(35.968953,126.960735,'농식품융합대학'
+)">농식품융합대학</button>
+
+<button id="대학본관" onclick="createMarker(35.969029,126.953782,'대학본관'
+)">대학본관</button>
+
+<button id="대학본관 창고" onclick="createMarker(35.9690862307508,126.95315912468206,'대학본관 창고'
+)">대학본관 창고</button>
+
+<button id="도예관" onclick="createMarker(35.971903,126.959701,'도예관'
+)">도예관</button>
+
+<button id="동문" onclick="createMarker(35.971086,126.963513,'동문'
+)">동문</button>
+
+<button id="ㅁ,ㅂ" class="shortcut">ㅁ,ㅂ</button><span id="targetㅁ,ㅂ" class="hreftarget" >.</span>
+
+<button id="문화체육관 " onclick="createMarker(35.9652244101743,126.95725322152686,'문화체육관'
+)">문화체육관 </button>
+
+<button id="문화체육관 별관" onclick="createMarker(35.965504,126.957871,'문화체육관 별관'
+)">문화체육관 별관</button>
+
+<button id="물품보관창고" onclick="createMarker(35.9719449,126.960104,'물품보관창고'
+)">물품보관창고</button>
+
+<button id="박물관" onclick="createMarker(35.966275,126.956642,'박물관'
+)">박물관</button>
+
+<button id="법학전문대학원" onclick="createMarker(35.97028040493238,126.95640886254265,'법학전문대학원'
+)">법학전문대학원</button>
+
+<button id="보은관" onclick="createMarker(35.972345,126.957738,'보은관'
+)">보은관</button>
+
+<button id="ㅅ" class="shortcut">ㅅ</button><span id="targetㅅ" class="hreftarget" >.</span>
+
+<button id="사범대학" onclick="createMarker(35.967331,126.960978,'사범대학'
+)">사범대학</button>
+
+<button id="사범대학 부속유치원" onclick="createMarker(35.967171,126.962004,'사범대학 부속유치원'
+)">사범대학 부속유치원</button>
+
+<button id="사은관" onclick="createMarker(35.973436,126.957713,'사은관'
+)">사은관</button>
+
+<button id="사회과학대학" onclick="createMarker(35.9713667,126.957126,'사회과학대학'
+)">사회과학대학</button>
+
+<button id="사회과학대학 신관" onclick="createMarker(35.971367769020965,126.95769557297643,'사회과학대학 신관'
+)">사회과학대학 신관</button>
+
+<button id="삼동관" onclick="createMarker(35.972387,126.957014,'삼동관'
+)">삼동관</button>
+
+<button id="새천년관" onclick="createMarker(35.970602,126.958703,'새천년관'
+)">새천년관</button>
+
+<button id="서문" onclick="createMarker(35.970415,126.953682,'서문'
+)">서문</button>
+
+<button id="소방행정관" onclick="createMarker(35.971830,126.957099,'소방행정관'
+)">소방행정관</button>
+
+<button id="소운동장" onclick="createMarker(35.969368,126.958188,'소운동장'
+)">소운동장</button>
+
+<button id="수덕호(봉황각)" onclick="createMarker(35.96951466493556,126.95594077910494,'수덕호(봉황각)'
+)">수덕호(봉황각)</button>
+
+<button id="숭산기념관(대학교당)" onclick="createMarker(35.96683150288698,126.95476937559411,'숭산기념관'
+)">숭산기념관(대학교당)</button>
+
+<button id="스포츠과학관" onclick="createMarker(35.968084,126.955268,'스포츠과학관'
+)">스포츠과학관</button>
+
+<button id="승리관" onclick="createMarker(35.971301,126.960896,'승리관'
+)">승리관</button>
+
+<button id="시외통학버스 승강장" onclick="createMarker(35.971181,126.961602,'시외통학버스 승강장'
+)">시외통학버스 승강장</button>
+
+<button id="ㅇ" class="shortcut">ㅇ</button><span id="targetㅇ" class="hreftarget" >.</span>
+
+<button id="약학대학" onclick="createMarker(35.96692273946659,126.95956516947584,'약학대학'
+)">약학대학</button>
+
+<button id="외국어학습관" onclick="createMarker(35.973814,126.957513,'외국어학습관'
+)">어학관(외국어학습관)</button>
+
+<button id="용화관" onclick="createMarker(35.972166,126.956986,'용화관'
+)">용화관</button>
+
+<button id="원광대학교 병원" onclick="createMarker(35.9643315,126.9596541,'원광대학교 병원'
+)">원광대학교 병원</button>
+
+<button id="원광대학교 한방병원" onclick="createMarker(35.9648512,126.9586276,'원광대학교 한방병원'
+)">원광대학교 한방병원</button>
+
+<button id="원광대학교병원 응급의료센터" onclick="createMarker(35.965864457715924,126.96058886786142,'원광대학교 응급의료센터'
+)">원광대학교병원 응급의료센터</button>
+
+<button id="원광대학교병원 장례문화원" onclick="createMarker(35.96462704340448,126.96316853193935,'원광대학교병원 장례문화원'
+)">원광대학교병원 장례문화원</button>
+
+<button id="원광디지털대학교" onclick="createMarker(35.9712834,126.9563483,'원광디지털대학교'
+)">원광디지털대학교</button>
+
+<button id="원광문화센터" onclick="createMarker(35.964126,126.9579048,'원광문화센터'
+)">원광문화센터</button>
+
+<button id="원체육관" onclick="createMarker(35.968256,126.9549874,'원체육관'
+)">원체육관</button>
+
+<button id="의과대학" onclick="createMarker(35.965750668040364,126.95931570264985,'의과대학'
+)">의과대학</button>
+
+<button id="인문대학" onclick="createMarker(35.9712557,126.9587092,'인문대학'
+)">인문대학</button>
+
+<button id="원광대학교 동물사육장" onclick="createMarker(35.9663396,126.9593203,'원광대학교 동물사육장'
+)">원광대학교 동물사육장</button>
+
+<button id="ㅈ" class="shortcut">ㅈ</button><span id="targetㅈ" class="hreftarget" >.</span>
+
+<button id="자동차실습관" onclick="createMarker(35.968293,126.960129,'자동차실습관'
+)">자동차실습관</button>
+
+<button id="자연과학대학" onclick="createMarker(35.9677005,126.9592925,'자연과학대학'
+)">자연과학대학</button>
+
+<button id="자연식물원" onclick="createMarker(35.9695221,126.9635351,'자연식물원'
+)">자연식물원</button>
+
+<button id="정문" onclick="createMarker(35.967366,126.953657,'정문'
+)">정문</button>
+
+<button id="제2치학관" onclick="createMarker(35.9649017,126.9618719,'제2치학관'
+)">제2치학관</button>
+
+<button id="제생의세관" onclick="createMarker(35.96624974402721,126.95971340224573,'제생의세관'
+)">제생의세관</button>
+
+<button id="조소관" onclick="createMarker(35.9715057,126.9598757,'조소관'
+)">조소관</button>
+
+<button id="조소관 별관" onclick="createMarker(35.97172538850059,126.96023342594573,'조소관 별관'
+)">조소관 별관</button>
+
+<button id="조형예술디자인대학" onclick="createMarker(35.9703391,126.9574871,'미술대학'
+)">조형예술디자인대학(미술대학)</button>
+
+<button id="중앙도서관" onclick="createMarker(35.9702607,126.9553666,'중앙도서관'
+)">중앙도서관</button>
+
+<button id="ㅊ" class="shortcut">ㅊ</button><span id="targetㅊ" class="hreftarget" >.</span>
+
+<button id="창업보육센터(무빙테크노관)" onclick="createMarker(35.969900081007495,126.9613675448565,'창업 보육센터'
+)">창업 보육센터</button>
+
+<button id="창의공과대학" onclick="createMarker(35.9678672,126.9581537,'창의공과대학'
+)">창의공과대학</button>
+
+<button id="창의공과대학 U.T.M실" onclick="createMarker(35.9682608,126.959941,'창의공과대학 U.T.M실'
+)">창의공과대학 U.T.M실</button>
+
+<button id="창의공과대학 기계공작실" onclick="createMarker(35.9684782,126.9599869,'기계 공작실'
+)">창의공과대학 기계공작실</button>
+
+<button id="청운관" onclick="createMarker(35.9730888,126.9578481,'청운관'
+)">청운관</button>
+
+<button id="치과대학" onclick="createMarker(35.9650342,126.9606814,'치과대학'
+)">치과대학</button>
+
+<button id="치과대학 치과병원" onclick="createMarker(35.96484146809018,126.96191263435942,'치과대학 치과병원'
+)">치과대학 치과병원</button>
+
+<button id="ㅍ,ㅎ" class="shortcut">ㅍ,ㅎ</button><span id="targetㅍ,ㅎ" class="hreftarget" >.</span>
+
+<button id="프라임관" onclick="createMarker(35.9684744,126.9579818,'프라임관'
+)">프라임관</button>
+
+<button id="학군단" onclick="createMarker(35.9719222,126.9588202,'학군단'
+)">학군단</button>
+
+<button id="학림관" onclick="createMarker(35.9726999,126.9561816,'학림관'
+)">학림관</button>
+
+<button id="학생지원관" onclick="createMarker(35.9697237,126.9545952,'학생지원관'
+)">학생지원관</button>
+
+<button id="학생회관" onclick="createMarker(35.9678671,126.9560984,'학생회관'
+)">학생회관</button>
+
+<button id="한의과대학" onclick="createMarker(35.964964,126.958653,'한의과 대학'
+)">한의과대학</button>
+
+<button id="한의학전문대학원" onclick="createMarker(35.9652841,126.9586815,'한의학전문대학원'
+)">한의학전문대학원</button>
+
+
+<br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+</div>
+</div>
+</section>
+</body>
+</html>
