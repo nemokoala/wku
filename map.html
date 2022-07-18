@@ -7,10 +7,10 @@
     <title>원광대학교 건물 위치 찾기</title>
     <link rel="stylesheet" href="map.css">
 </head>
-<body>
+<body onload="setCenter(1500)">
     <header class="header">
         <div class="header__firstLine">
-            <div class="logo">WKU</div>
+            <div class="logo"><span style="color: red;">W</span><span style="color: blue;">K</span><span>U</span></div>
             <div class="firstLine__btns">
                 <a href="alarm.html"><div>비상벨</div></a>
                 <a href="https://www.wku.ac.kr/campus-life/school-bus-lines/intra-city-lines.html"><div>시내 시간표</div></a>
@@ -18,9 +18,11 @@
             </div>
         </div>
         <div class="header__secondLine">
-            <div class="header__btn">
+            <div class="secondLine__btns">
                 <div onclick="setNormalMap()">일반지도</div>
+                <div>|</div>
                 <div onclick="setSkyMap()">위성지도</div>
+                <div>|</div>
                 <div onclick="findMyLocation()">내위치</div>
             </div>
         </div>
@@ -28,7 +30,7 @@
 
     <section class="section">
         <div id="map"></div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=853cabe7a0f75907f90d47b19fb49f83"></script>
+        <script type="text/javascript" src="http://dapi.kakao.com/v2/maps/sdk.js?appkey=853cabe7a0f75907f90d47b19fb49f83"></script>
         <script src="map.js"></script>
         <div class="explainArea">빨간색 화살표 클릭 시 해당 위치로 길찾기를 실행합니다</div>
         <article class="buttonArea">
