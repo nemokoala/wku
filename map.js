@@ -203,8 +203,8 @@ clickcheck.addEventListener("click",function(){ccvalue=1;});
 
 
 function res() {
-    document.querySelector('#map').style.height = '65vh';
     document.querySelector('.buttonArea').style.height = 'calc(100vh - (80px + 65vh))';
     document.querySelector('.buttonArea').style.top = 'calc(80px + 65vh)';
+    document.querySelector('#map').style.height = '65vh';
     map.relayout();
 }
