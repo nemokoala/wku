@@ -201,7 +201,7 @@ clickcheck = document.getElementById('getButton');
 ccvalue=1;
 clickcheck.addEventListener("click",function(){ccvalue=1;});
 
-
+let hvalue=65vh;
 function res() {
     document.querySelector('.buttonArea').style.height = 'calc(100vh - (80px + 65vh))';
     document.querySelector('.buttonArea').style.top = 'calc(80px + 65vh)';

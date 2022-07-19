@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&family=Sunflower:wght@500&display=swap');
 
-/*::-webkit-scrollbar {
+*::-webkit-scrollbar {
     display: none; 
-    }*/
+    }
 a {
     text-decoration: none;
 }
@@ -25,6 +25,23 @@ body {
     background: whitesmoke;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
+}
+
+.explainArea {
+    animation-name: first;
+    animation-duration: 9s;background:#d95050; border:black 1px solid; 
+    position: fixed; width:80vw; padding: 20px 20px; font-size:1.2rem;  
+    vertical-align: middle; left:10vw; top:14vh; z-index:300; 
+    border-radius:10px; display:none; justify-content: center ; 
+    align-items: center; color:white;  text-align: center; box-sizing: border-box;
+}
+
+@keyframes first {
+    0% { transform: scale(0,0); }
+    10% { transform: scale(1.15,1.15); }
+    20% { transform: scale(1,1); }
+    70% { transform: scale(1,1); filter: opacity(1); }
+    100% {filter: opacity(0); }
 }
 
 .header {
@@ -113,13 +130,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     background: skyblue;
-    padding: 0px 5px;
+    padding: 0px 3px;
     box-sizing: border-box;
     justify-content: flex-start;
 }
 
 .buttonArea div {
-    width: calc(50% - 10px);
+    width: calc(50% - 6px);
     height: 50px;
     background: white;
     color: black;
@@ -128,7 +145,7 @@ body {
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
     border-radius: 7px;
-    margin: 5px 5px;
+    margin: 3px 3px;
     box-sizing: border-box;
     display: flex;
     justify-content: center;
@@ -159,7 +176,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 25px 5px 5px 5px !important;
+    margin: 25px 3px 3px 3px !important;
 }
 
 .nav {
