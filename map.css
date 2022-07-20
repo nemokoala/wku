@@ -30,7 +30,7 @@ body {
 .explainArea {
     animation-name: first;
     animation-duration: 9s;background:#d95050; border:black 1px solid; 
-    position: fixed; width:80vw; padding: 10px 10px; font-size:1rem;  
+    position: fixed; width:80vw; padding: 20px 13px; font-size:1.2rem;  
     vertical-align: middle; left:10vw; top:10vh; z-index:300; 
     border-radius:10px; display:none; justify-content: center ; 
     align-items: center; color:white;  text-align: center; box-sizing: border-box;
@@ -97,7 +97,7 @@ body {
 }
 
 .secondLine__btns {
-    width: 100%;
+    width: calc(100% - 10px);
     height: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -124,18 +124,18 @@ body {
 }
 
 .mapSizeBtn {
-    width: 200px;
+    width: 50vw;
     height: 30px;
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top:50vh;
-    right:10px;
+    top: calc((80px + 45vh) - 30px);
+    left: 25vw;
     z-index: 10;
 }
 
 .mapSizeBtn div {
-    width: 100px;
+    width: 50%;
     height: 100%;
     font-size: 1rem;
     color: black;
@@ -146,6 +146,7 @@ body {
     box-sizing: border-box;
     border: solid 1px black;
     font-size: bolder;
+    margin: 0;
 }
 
 .main__bottomArea { /*지도 밑 하단 전체 영역*/

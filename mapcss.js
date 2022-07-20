@@ -4,6 +4,8 @@ let itv;
 let heightCount=0;
 var shortcutBtn = document.querySelectorAll('.shortcut');
 var changeColor = "yellow";
+let mapSizeBtnDefault = 50;
+let mapSizeBtnValue = 0;
 
 window.addEventListener('resize', re);
 
@@ -17,11 +19,25 @@ function re() {
         document.querySelector('.nav').style.width = '15%';
         document.querySelector('.buttonArea').style.width = 'calc(100% - 15%)';
     }*/
-    if (aa>20)
-    panTo(aa,bb);
+    
+    /*if (window.innerHeight<=700) {
+        mapSizeBtnDefault = 51;
+        document.querySelector('.mapSizeBtn').style.top = (mapSizeBtnDefault + mapSizeBtnValue)+'vh';
+    }
+    else if (window.innerHeight>700 && window.innerHeight<1200){
+        mapSizeBtnDefault = 48.5;
+        document.querySelector('.mapSizeBtn').style.top = (mapSizeBtnDefault + mapSizeBtnValue)+'vh';
+    }
+    else if (window.innerHeight>1200){
+        mapSizeBtnDefault = 47;
+        document.querySelector('.mapSizeBtn').style.top = (mapSizeBtnDefault + mapSizeBtnValue)+'vh';
+    }*/
+
+    if (aa>20){panTo(aa,bb);}
 }
 
-let mapSizeBtnValue = 50;
+
+
 function upMapHeight(){
     heightCount=0;
     itv = setInterval(frame,1);
@@ -31,12 +47,12 @@ function upMapHeight(){
         }else {
             mapHeight+=0.2;
             mapSizeBtnValue += 0.2; 
-            document.querySelector('.mapSizeBtn').style.top = mapSizeBtnValue+'vh';
+            document.querySelector('.mapSizeBtn').style.top = 'calc((80px + 45vh + '+mapSizeBtnValue+'vh) - 30px)';
             resizemap();
             heightCount+=1;
         }
 
-    }
+    } 
 }
 
 function downMapHeight(){
@@ -48,7 +64,7 @@ function downMapHeight(){
         }else {
             mapHeight-=0.2;
             mapSizeBtnValue -= 0.2; 
-            document.querySelector('.mapSizeBtn').style.top = mapSizeBtnValue+'vh';
+            document.querySelector('.mapSizeBtn').style.top = 'calc((80px + 45vh + '+mapSizeBtnValue+'vh) - 30px)';
             resizemap();
             heightCount+=1;
         }
@@ -93,7 +109,7 @@ function colorReset(){
     }
 }
 
-document.querySelector('.testBtn').addEventListener("click",function(){colorReset()});
+//document.querySelector('.testBtn').addEventListener("click",function(){colorReset()});
 
 
 
