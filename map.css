@@ -30,8 +30,8 @@ body {
 .explainArea {
     animation-name: first;
     animation-duration: 9s;background:#d95050; border:black 1px solid; 
-    position: fixed; width:80vw; padding: 20px 20px; font-size:1.2rem;  
-    vertical-align: middle; left:10vw; top:14vh; z-index:300; 
+    position: fixed; width:80vw; padding: 10px 10px; font-size:1rem;  
+    vertical-align: middle; left:10vw; top:10vh; z-index:300; 
     border-radius:10px; display:none; justify-content: center ; 
     align-items: center; color:white;  text-align: center; box-sizing: border-box;
 }
@@ -103,12 +103,18 @@ body {
     flex-flow: row nowrap;
     justify-content: flex-start;
     align-items: center;
+    margin-left: 10px;
 }
 
 .secondLine__btns div {
     display: flex;
-    padding: 5px 0px 5px 20px;
+    padding: 5px 10px 4px 10px;
     color: white;
+    border-radius: 7px;
+}
+
+.secondLine_activeBtn:hover {
+    background:rgb(124, 184, 252);
 }
 
 #map {
@@ -119,18 +125,18 @@ body {
 
 .mapSizeBtn {
     width: 200px;
-    height: 50px;
+    height: 30px;
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top:45vh;
+    top:50vh;
     right:10px;
     z-index: 10;
 }
 
 .mapSizeBtn div {
     width: 100px;
-    height: 50px;
+    height: 100%;
     font-size: 1rem;
     color: black;
     background: white;
@@ -139,6 +145,7 @@ body {
     align-items: center;
     box-sizing: border-box;
     border: solid 1px black;
+    font-size: bolder;
 }
 
 .main__bottomArea { /*지도 밑 하단 전체 영역*/
@@ -163,12 +170,13 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     background: skyblue;
-    padding: 0px 3px;
+    padding: 0px 5px;
     box-sizing: border-box;
     justify-content: flex-start;
+    scroll-behavior: smooth;
 }
 
-.buttonArea div {
+.buttonArea div { /*건물 이름 버튼 작은거*/
     width: calc(50% - 6px);
     height: 50px;
     background: white;
@@ -177,7 +185,7 @@ body {
     font-size: 1rem;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
-    border-radius: 7px;
+    border-radius: 9px;
     margin: 3px 3px;
     box-sizing: border-box;
     display: flex;
@@ -187,6 +195,12 @@ body {
     padding: 10px;
 }
 
+.buttonArea div:hover {
+    background:rgb(124, 184, 252);
+}
+
+
+/*페이지 가로 크기에 따른 버튼 갯수 조절*/
 @media screen and (min-width:768px) {
     .buttonArea div {
         width: calc(33.333% - 6px);
@@ -211,7 +225,7 @@ body {
     }
 }
 
-.shortcut { /*long button*/
+.shortcut { /*자음 구분하는 긴 버튼*/
     width: 100% !important;
     height: 35px !important;
     background: white;
@@ -225,6 +239,10 @@ body {
     margin: 25px 3px 3px 3px !important;
 }
 
+#기타버튼 {
+    margin: 12px 3px 3px 3px !important;
+}
+
 .nav {
     width: 15%;
     height: calc(100vh - (80px + 45vh));
@@ -233,6 +251,16 @@ body {
     display: flex;
     flex-flow: column nowrap;
     overflow-y: scroll;
+}
+
+@media screen and (min-width:799px) {
+    .nav {
+        width: 120px;
+    }
+
+    .buttonArea {
+        width: calc(100vw - 120px);
+    }
 }
 
 .nav a {
@@ -245,7 +273,7 @@ body {
     height: 100%;
     margin: 0;
     border: 1px solid rgb(51, 138, 238);
-    background: rgb(124, 184, 252);
+    background: rgb(57, 135, 224);
     color: black;
     font-weight: bold;
     font-size: 1rem;

@@ -20,11 +20,11 @@
         </div>
         <div class="header__secondLine">
             <div class="secondLine__btns">
-                <div onclick="setNormalMap()">일반지도</div>
+                <div class="secondLine_activeBtn"onclick="setNormalMap()">일반지도</div>
                 <div>|</div>
-                <div onclick="setSkyMap()">위성지도</div>
+                <div class="secondLine_activeBtn" onclick="setSkyMap()">위성지도</div>
                 <div>|</div>
-                <div onclick="findMyLocation()">내위치</div>
+                <div class="secondLine_activeBtn" onclick="findMyLocation()">내위치</div>
             </div>
         </div>
     </header>
@@ -37,7 +37,7 @@
 
     <section class="section">
         <div id="map"></div>
-        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=853cabe7a0f75907f90d47b19fb49f83"></script>
+        <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=853cabe7a0f75907f90d47b19fb49f83"></script>
         <script src="map.js"></script>
         <div class="explainArea">빨간색 화살표 클릭 시 해당 위치로 길찾기를 실행합니다</div>
 

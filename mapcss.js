@@ -1,10 +1,14 @@
 let navBtnWidth = 150;
 let mapHeight = 45;
+let itv;
+let heightCount=0;
+var shortcutBtn = document.querySelectorAll('.shortcut');
+var changeColor = "yellow";
 
 window.addEventListener('resize', re);
 
 function re() {     
-    if (window.innerWidth>=800) {
+    /*if (window.innerWidth>=800) {
         document.querySelector('.nav').style.width = navBtnWidth+'px';
         document.querySelector('.buttonArea').style.width = 'calc(100% - '+navBtnWidth+'px)';
     }
@@ -12,14 +16,12 @@ function re() {
     else {
         document.querySelector('.nav').style.width = '15%';
         document.querySelector('.buttonArea').style.width = 'calc(100% - 15%)';
-    }
+    }*/
     if (aa>20)
     panTo(aa,bb);
 }
 
-let itv;
-let heightCount=0;
-
+let mapSizeBtnValue = 50;
 function upMapHeight(){
     heightCount=0;
     itv = setInterval(frame,1);
@@ -28,6 +30,8 @@ function upMapHeight(){
             clearInterval(itv);
         }else {
             mapHeight+=0.2;
+            mapSizeBtnValue += 0.2; 
+            document.querySelector('.mapSizeBtn').style.top = mapSizeBtnValue+'vh';
             resizemap();
             heightCount+=1;
         }
@@ -43,6 +47,8 @@ function downMapHeight(){
             clearInterval(itv);
         }else {
             mapHeight-=0.2;
+            mapSizeBtnValue -= 0.2; 
+            document.querySelector('.mapSizeBtn').style.top = mapSizeBtnValue+'vh';
             resizemap();
             heightCount+=1;
         }
@@ -71,8 +77,7 @@ function changeColor() {
 
 }*/
 
-var shortcutBtn = document.querySelectorAll('.shortcut');
-var changeColor = "yellow";
+document.querySelector('.nav기타').addEventListener("click",function(){colorReset(); 기타버튼.style.backgroundColor=changeColor});
 document.querySelector('.navㄱ').addEventListener("click",function(){colorReset(); ㄱ.style.backgroundColor=changeColor});
 document.querySelector('.navㄴㄷ').addEventListener("click",function(){colorReset(); ㄴㄷ.style.backgroundColor=changeColor});
 document.querySelector('.navㅁㅂ').addEventListener("click",function(){colorReset(); ㅁㅂ.style.backgroundColor=changeColor});
@@ -89,3 +94,14 @@ function colorReset(){
 }
 
 document.querySelector('.testBtn').addEventListener("click",function(){colorReset()});
+
+
+
+setInterval(() => {
+    step();
+}, 500);
+function step(){
+    if (document.querySelector('.nav').style.width=="150px") {
+        document.querySelector('.nav').style.width="300px";
+    }
+}
