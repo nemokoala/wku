@@ -105,13 +105,6 @@ function createOverlay(){
 
 count+=1;
 level=map.getLevel();
-    if (level==6) moveY=0.0017;
-    if (level==5) moveY=0.0010;
-    if (level==4) moveY=0.0005;
-    if (level==3) moveY=0.00025;
-    if (level==2) moveY=0.0001;
-    if (level==1) moveY=0.00005;
-    moveY=0;
 var content = '<div class="customoverlay">' +
     '  <a href="https://map.kakao.com/link/to/'+linkValue+'"'+'target="_self">' +
     '    <span class="title">'+name+'</span>' +

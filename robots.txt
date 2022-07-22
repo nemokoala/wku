@@ -1,3 +1,0 @@
-User-agent: *
-Allow:/
-Sitemap: https://wku.netlify.app/sitemap.xml
