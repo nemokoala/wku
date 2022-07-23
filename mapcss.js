@@ -116,6 +116,8 @@ document.querySelector('.navㅈ').addEventListener("click",function(){colorReset
 document.querySelector('.navㅊ').addEventListener("click",function(){colorReset(); ㅊ.style.backgroundColor=changeColor});
 document.querySelector('.navㅍㅎ').addEventListener("click",function(){colorReset(); ㅍㅎ.style.backgroundColor=changeColor});
 function colorReset(){
+    let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
     for (var i=0; i<shortcutBtn.length; i++){
         shortcutBtn[i].style.backgroundColor="white";
     }
