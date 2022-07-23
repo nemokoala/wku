@@ -26,19 +26,17 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    min-height: 100vh;
     font-size: 0;
     background: whitesmoke;
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
-    
+    min-height: 100vh;
+  
+  @supports (-webkit-touch-callout: none) {
+    min-height: -webkit-fill-available;
+  }
 }
 
-@supports (-webkit-touch-callout: none) {
-    body {
-        min-height: -webkit-fill-available;
-    }
-}
 
 .explainArea {
     animation-name: first;
