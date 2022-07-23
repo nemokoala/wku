@@ -7,6 +7,7 @@ var changeColor = "pink";
 let mapSizeBtnDefault = 50;
 let mapSizeBtnValue = 0;
 document.querySelector("html").style.height = window.innerHeight + "px";
+document.querySelector("body").style.height = window.innerHeight + "px";
 
 window.addEventListener('resize', re);
 
