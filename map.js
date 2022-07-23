@@ -177,7 +177,7 @@ let explainCount=0;
 function explainOn() {
     if (explainCount==0){
         document.querySelector(".explainArea").style.display = "flex";
-        let TimerID=setTimeout(()=>document.querySelector(".explainArea").style.display = "none",9000);
+        let TimerID=setTimeout(()=>document.querySelector(".explainArea").style.display = "none",7000);
         explainCount=1;
     }
 }

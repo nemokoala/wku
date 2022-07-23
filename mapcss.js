@@ -8,7 +8,7 @@ let mapSizeBtnDefault = 50;
 let mapSizeBtnValue = 0;
 let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
-
+document.querySelector('#normalMap').style.backgroundColor = "rgb(255, 122, 144)";
 
 window.addEventListener('resize', re);
 
@@ -97,7 +97,7 @@ function resizemap() {
     //document.querySelector('.nav').style.height = 'calc(100% - (80px + '+mapHeight+'%))';
     map.relayout();
 }
-
+upMapHeight();
 setTimeout(re,500);
 
 /*var searchBtn = document.querySelectorAll('#searchButton');
@@ -141,3 +141,12 @@ function step(){
         document.querySelector('.nav').style.width="300px";
     }
 }
+
+document.querySelector('#normalMap').addEventListener("click",function(){
+    document.querySelector('#normalMap').style.backgroundColor = "rgb(255, 122, 144)";
+    document.querySelector('#satelliteMap').style.backgroundColor = "rgb(38, 35, 194)";
+});
+document.querySelector('#satelliteMap').addEventListener("click",function(){
+    document.querySelector('#normalMap').style.backgroundColor = "rgb(38, 35, 194)";
+    document.querySelector('#satelliteMap').style.backgroundColor = "rgb(255, 122, 144)";
+});

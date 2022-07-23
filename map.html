@@ -24,9 +24,9 @@
         </div>
         <div class="header__secondLine">
             <div class="secondLine__btns">
-                <div class="secondLine_activeBtn"onclick="setNormalMap()">일반지도</div>
+                <div id="normalMap" class="secondLine_activeBtn" onclick="setNormalMap()">일반지도</div>
                 <div>|</div>
-                <div class="secondLine_activeBtn" onclick="setSkyMap()">위성지도</div>
+                <div id="satelliteMap"class="secondLine_activeBtn" onclick="setSkyMap()">위성지도</div>
                 <div>|</div>
                 <div class="secondLine_activeBtn" onclick="findMyLocation()">내위치</div>
             </div>
@@ -45,7 +45,7 @@
             <div class="upBtn" onclick="upMapHeight()">▼</div>
             <div class="downBtn" onclick="downMapHeight()">▲</div>
         </div>
-        
+
         <main class="main__bottomArea">
             <nav class="nav">
                 <a href="#target기타"><div id="searchButton" class="nav기타"><span id="기타">기타</span></div></a>
