@@ -143,13 +143,13 @@ body {
 }
 
 .mapSizeBtn {
-    width: 30vw;
+    width: 100vw;
     height: 30px;
     display: flex;
     justify-content: space-around;
-    position: absolute;
-    top: calc(45% + 15px);
-    left: 35vw;
+    position: relative;
+    top: 0;
+    left: 0vw;
     z-index: 10;
 }
 
@@ -158,7 +158,7 @@ body {
     height: 100%;
     font-size: 1rem;
     color: white;
-    background: skyblue;
+    background: rgb(167, 235, 135);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,7 +175,7 @@ body {
     flex-wrap: nowrap;
     justify-content: flex-start;
     background: yellow;
-    height: 55%;
+    height: calc(55% - 30px);
 }
 
 .buttonArea {

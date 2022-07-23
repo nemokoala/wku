@@ -65,7 +65,7 @@ function upMapHeight(){
         }else {
             mapHeight+=0.2;
             mapSizeBtnValue += 0.2; 
-            document.querySelector('.mapSizeBtn').style.top = 'calc('+mapHeight+'% + 15px)';
+            //document.querySelector('.mapSizeBtn').style.top = 'calc((45% + '+mapSizeBtnValue+'%) + 15px)';
             resizemap();
             heightCount+=1;
         }
@@ -82,7 +82,7 @@ function downMapHeight(){
         }else {
             mapHeight-=0.2;
             mapSizeBtnValue -= 0.2; 
-            document.querySelector('.mapSizeBtn').style.top = 'calc('+mapHeight+'% + 15px)';
+            //document.querySelector('.mapSizeBtn').style.top = 'calc((45% + '+mapSizeBtnValue+'%) + 15px)';
             resizemap();
             heightCount+=1;
         }
@@ -91,8 +91,8 @@ function downMapHeight(){
 }
 
 function resizemap() {
-    document.querySelector('.main__bottomArea').style.height = 100-mapHeight+'%';
-    document.querySelector('.main__bottomArea').style.top = 100-mapHeight+'%';
+    document.querySelector('.main__bottomArea').style.height = 'calc(100% - '+mapHeight+'% - 30px)';
+    //document.querySelector('.main__bottomArea').style.top = 100-mapHeight+'%';
     document.querySelector('#map').style.height = mapHeight+'%';
     //document.querySelector('.nav').style.height = 'calc(100% - (80px + '+mapHeight+'%))';
     map.relayout();
