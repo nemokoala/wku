@@ -6,8 +6,7 @@ var shortcutBtn = document.querySelectorAll('.shortcut');
 var changeColor = "pink";
 let mapSizeBtnDefault = 50;
 let mapSizeBtnValue = 0;
-let vh = window.innerHeight * 0.01
-document.documentElement.style.setProperty('--vh', `${vh}px`)
+document.querySelector(".html").style.height = window.innerHeight + "px";
 
 window.addEventListener('resize', re);
 
@@ -36,8 +35,7 @@ function re() {
     }*/
 
     if (aa>20){panTo(aa,bb);}
-    let vh = window.innerHeight * 0.01
-    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.querySelector(".html").style.height = window.innerHeight + "px";
 }
 
 
