@@ -16,6 +16,12 @@ html {
     height: 100vh;
 }
 
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 11px;
+    }
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -51,7 +57,7 @@ body {
     font-size: 1rem;
     display: flex;
     flex-direction: column;
-    display: sticky;
+    position: sticky;
 }
 
 .header__firstLine {
