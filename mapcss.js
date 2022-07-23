@@ -6,6 +6,8 @@ var shortcutBtn = document.querySelectorAll('.shortcut');
 var changeColor = "pink";
 let mapSizeBtnDefault = 50;
 let mapSizeBtnValue = 0;
+let vh = window.innerHeight * 0.01
+document.documentElement.style.setProperty('--vh', `${vh}px`)
 
 window.addEventListener('resize', re);
 
@@ -38,8 +40,7 @@ function re() {
     document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
-let vh = window.innerHeight * 0.01
-document.documentElement.style.setProperty('--vh', `${vh}px`)
+
 
 
 function upMapHeight(){
