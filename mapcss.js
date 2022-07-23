@@ -92,7 +92,7 @@ function resizemap() {
     map.relayout();
 }
 
-setTimeout(re,300);
+setTimeout(re,500);
 
 /*var searchBtn = document.querySelectorAll('#searchButton');
 var shortcutBtn = document.querySelectorAll('.shortcut');
