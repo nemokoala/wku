@@ -37,7 +37,7 @@ body {
     animation-name: first;
     animation-duration: 9s;background:#d95050; border:black 1px solid; 
     position: fixed; width:80vw; padding: 20px 13px; font-size:1.2rem;  
-    vertical-align: middle; left:10vw; top:10vh; z-index:300; 
+    vertical-align: middle; left:10vw; top:10%; z-index:300; 
     border-radius:10px; display:none; justify-content: center ; 
     align-items: center; color:white;  text-align: center; box-sizing: border-box;
 }
@@ -132,9 +132,13 @@ body {
     background:rgb(124, 184, 252);
 }
 
+.section {
+    height: calc(100% - 80px);
+}
+
 #map {
     width: 100%;
-    height: 45vh;
+    height: 45%;
     z-index: 1;
 }
 
@@ -144,7 +148,7 @@ body {
     display: flex;
     justify-content: space-around;
     position: absolute;
-    top: calc((80px + 45vh) - 30px);
+    top: calc(45% + 15px);
     left: 35vw;
     z-index: 10;
 }
@@ -171,15 +175,16 @@ body {
     flex-wrap: nowrap;
     justify-content: flex-start;
     background: yellow;
+    height: 55%;
 }
 
 .buttonArea {
     width: 85%;
-    /*top: calc(80px + 45vh);
+    /*top: calc(80px + 45%);
     position: absolute;
     left: 15%;*/
     margin: 0;
-    height: calc(100vh - (80px + 45vh));
+    height: 100%;
     background:whitesmoke;
     overflow-y: scroll;
     display: flex;
@@ -261,7 +266,7 @@ body {
 
 .nav {
     width: 15%;
-    height: calc(100vh - (80px + 45vh));
+    height: 100%;
     margin: 0;
     background: rgb(51, 138, 238);
     display: flex;
