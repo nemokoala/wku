@@ -34,8 +34,12 @@ function re() {
     }*/
 
     if (aa>20){panTo(aa,bb);}
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
 }
 
+let vh = window.innerHeight * 0.01
+document.documentElement.style.setProperty('--vh', `${vh}px`)
 
 
 function upMapHeight(){
