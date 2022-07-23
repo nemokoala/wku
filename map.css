@@ -58,6 +58,7 @@ body {
     display: flex;
     flex-direction: column;
     position: sticky;
+    top: 0;
 }
 
 .header__firstLine {
