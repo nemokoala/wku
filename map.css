@@ -26,7 +26,7 @@ body {
     margin: 0;
     padding: 0;
     width: 100vw;
-    height: 100%;
+    height: calc(var(--vh, 1vh) * 100);
     font-size: 0;
     background: whitesmoke;
     font-family: 'Nanum Gothic', sans-serif;
