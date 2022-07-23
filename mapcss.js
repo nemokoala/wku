@@ -3,7 +3,7 @@ let mapHeight = 45;
 let itv;
 let heightCount=0;
 var shortcutBtn = document.querySelectorAll('.shortcut');
-var changeColor = "yellow";
+var changeColor = "pink";
 let mapSizeBtnDefault = 50;
 let mapSizeBtnValue = 0;
 

@@ -124,13 +124,13 @@ body {
 }
 
 .mapSizeBtn {
-    width: 50vw;
+    width: 30vw;
     height: 30px;
     display: flex;
     justify-content: space-around;
     position: absolute;
     top: calc((80px + 45vh) - 30px);
-    left: 25vw;
+    left: 35vw;
     z-index: 10;
 }
 
@@ -138,8 +138,8 @@ body {
     width: 50%;
     height: 100%;
     font-size: 1rem;
-    color: black;
-    background: white;
+    color: white;
+    background: skyblue;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -291,7 +291,7 @@ body {
      width:0; 
      height:0; 
      position:relative; 
-     top:-150px;  
+     top:-50px;  
      color:rgba(0,0,0,0);
 }
 
