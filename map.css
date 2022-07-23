@@ -14,7 +14,6 @@ html {
     font-size: 16px;
     width: 100vw;
     height: 100vh;
-    height: var(--vh, 1vh) * 100;
 }
 
 @media screen and (max-width: 350px) {
@@ -32,7 +31,6 @@ body {
     font-family: 'Nanum Gothic', sans-serif;
     font-weight: bold;
     height: 100vh;
-    height: var(--vh, 1vh) * 100;
 }
 
 
