@@ -48,7 +48,7 @@ var positions = [
         latlng: new kakao.maps.LatLng(35.965455,126.954183)
     },
     {
-        title: '문화체육관 별관 뒤쪽 숲길 비상벨',
+        title: '문화체육관 별관 뒤쪽 비상벨',
         latlng: new kakao.maps.LatLng(35.966091,126.957909)
     },
     {
@@ -145,7 +145,7 @@ insert(35.968798,126.956869,'공공정책대학쪽 🚨');
 insert(35.967653,126.954300,'노천극장 옆 🚨');
 insert(35.965854,126.955325,'60주년기념관쪽(1) 🚨');
 insert(35.965455,126.954183,'60주년기념관쪽(2) 🚨');
-insert(35.966091,126.957909,'문화체육관 별관 뒤쪽 숲길 🚨');
+insert(35.966091,126.957909,'문화체육관 별관 뒤쪽 🚨');
 insert(35.965902,126.959382,'의과대학쪽 🚨');
 insert(35.967580,126.961192,'사범대학뒤편 🚨');
 insert(35.968467,126.959412,'프라임관 기계공작실 사이 🚨');
@@ -263,24 +263,31 @@ kakao.maps.event.addListener(map, 'zoom_changed', function() {
     
     // 지도의 현재 레벨을 얻어옵니다
     var level = map.getLevel();
-    
-    if (level<=3) {
+
+    if (level<=2) {
         let overlaySizeValue = 1.1;
         let bottomValue= 55;
         document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
         document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
     }
+    
+    if (level==3) {
+        let overlaySizeValue = 0.9;
+        let bottomValue= 50;
+        document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
+        document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
+    }
 
     if (level==4) {
-        let overlaySizeValue = 0.7;
-        let bottomValue= 40;
+        let overlaySizeValue = 0.6;
+        let bottomValue= 35;
         document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
         document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
     }
 
     if (level==5) {
-        let overlaySizeValue = 0.5;
-        let bottomValue= 35;
+        let overlaySizeValue = 0;
+        let bottomValue= 0;
         document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
         document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
     }
