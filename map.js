@@ -15,11 +15,11 @@ var markers=[];
 count=0;  //전역변수 선언
 a=0; b=0; name="";
 linkValue="";
-moveY=0;
 level=map.getLevel();
 aa=0; bb=0; nname="";
 let locationAccess=0;
 let locPosition;
+ccvalue=0;
 
 findMyLocation();
 function findMyLocation(){
@@ -68,12 +68,12 @@ function displayMarker(locPosition, message) {
     '</div>';
     
     
-    overlay = new kakao.maps.CustomOverlay({
+    overlay2 = new kakao.maps.CustomOverlay({
     position: locPosition,
     content: content,
     yAnchor: 1 
 });
-overlay.setMap(map);
+overlay2.setMap(map); //overlay 2는 현재 위치 오버레이를 삭제하지 않게 하기 위해 지정
     
 }
 }
@@ -92,8 +92,8 @@ var marker = new kakao.maps.Marker({
     })
 marker.setMap(map);
 markers.push(marker);
-if(ccvalue==1)
-{panTo(a,b);}
+
+panTo(a,b);
 linkValue=name+","+a+","+b;
 
 createOverlay();
@@ -111,7 +111,7 @@ var content = '<div class="customoverlay">' +
     '  </a>' +
     '</div>';
     
-    var position = new kakao.maps.LatLng(a-moveY,b);  
+    var position = new kakao.maps.LatLng(a,b);  
     overlay = new kakao.maps.CustomOverlay({
     position: position,
     content: content,
