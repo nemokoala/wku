@@ -235,4 +235,30 @@ document.querySelector('#satelliteMap').addEventListener("click",function(){
     document.querySelector('#satelliteMap').style.backgroundColor = "rgb(255, 122, 144)";
 });
 
+let vh = window.innerHeight * 0.01;
 document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+window.addEventListener('resize', () => {
+    let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+window.addEventListener('touchend', () => {
+    let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+window.addEventListener('scroll', () => {
+    let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
+});
+
+
+kakao.maps.event.addListener(map, 'zoom_changed', function() {        
+    
+    // 지도의 현재 레벨을 얻어옵니다
+    var level = map.getLevel();
+    
+    
+    
+});
