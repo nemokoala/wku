@@ -220,5 +220,19 @@ else if (locationAccess==1){
 
 function explainOff(){
     let TimerIID=setTimeout(()=>panTo(35.9694467008573, 126.95808664531884),100);
-    let TimerID=setTimeout(()=>document.querySelector(".explainArea").style.display = "none",9000);
+    document.querySelector(".explainArea").style.display = "flex";
+    let TimerID=setTimeout(()=>document.querySelector(".explainArea").style.display = "none",7000);
 }
+
+document.querySelector('#normalMap').style.backgroundColor = "rgb(255, 122, 144)";
+
+document.querySelector('#normalMap').addEventListener("click",function(){
+    document.querySelector('#normalMap').style.backgroundColor = "rgb(255, 122, 144)";
+    document.querySelector('#satelliteMap').style.backgroundColor = "rgb(38, 35, 194)";
+});
+document.querySelector('#satelliteMap').addEventListener("click",function(){
+    document.querySelector('#normalMap').style.backgroundColor = "rgb(38, 35, 194)";
+    document.querySelector('#satelliteMap').style.backgroundColor = "rgb(255, 122, 144)";
+});
+
+document.documentElement.style.setProperty('--vh', `${vh}px`);

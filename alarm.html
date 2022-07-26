@@ -2,6 +2,8 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="index,follow">
     <meta name="description" content="원광대학교 캠퍼스의 비상벨 위치 확인과 가는 길을 알려줍니다.">
     <meta property="og:type" content="website"> 
@@ -10,18 +12,40 @@
     <title>원광대학교 비상벨 위치 찾기</title>
     <link rel="stylesheet" href="alarm.css">
 </head>
-<body style="width:100vw; height:100vh; margin:0;" onload="explainOff()">
-<div id="map" style="width:100%;height:100vh; margin:0px;"></div>
+<body onload="explainOff()">
+        <header class="header">
+        <div class="header__firstLine">
+            <a href="index.html"><div class="logo"><span style="color: rgb(187, 0, 0);">W</span><span style="color: rgb(0, 0, 189);">K</span><span>U</span></div></a>
+            <div class="firstLine__btns">
+                <a href="map.html"><div>건물 찾기</div></a>
+                <a href="https://www.wku.ac.kr/campus-life/school-bus-lines/intra-city-lines.html"><div>시내 시간표</div></a>
+                <a href="https://www.wku.ac.kr/campus-life/school-bus-lines/inter-city-lines.html"><div>시외 시간표</div></a>
+            </div>
+        </div>
+        <div class="header__secondLine">
+            <div class="secondLine__btns">
+                <div id="normalMap" class="secondLine_activeBtn" onclick="setNormalMap()">일반지도</div>
+                <div>|</div>
+                <div id="satelliteMap"class="secondLine_activeBtn" onclick="setSkyMap()">위성지도</div>
+                <div>|</div>
+                <div class="secondLine_activeBtn" onclick="panTo(35.9694467008573,126.95808664531884)">비상벨</div>
+                <div>|</div>
+                <div class="secondLine_activeBtn" onclick="findMyLocation()">내위치</div>
+            </div>
+        </div>
+    </header>
+<div id="map"></div>
 
-<script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=853cabe7a0f75907f90d47b19fb49f83"></script>
-<script src="alarm.js"></script>
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=853cabe7a0f75907f90d47b19fb49f83"></script>
 <div class="explainArea">빨간색 화살표 클릭 시 해당 위치로 길찾기를 실행합니다</div>
-<div id="모드버튼">
+<script src="alarm.js"></script>
+
+<!--<div id="모드버튼">
 <button id="지도버튼" onclick="setNormalMap()">지도</button>
 <button id="스카이뷰버튼" onclick="setSkyMap()">스카이뷰</button>
 <button id="스카이뷰버튼" onclick="findMyLocation()">내위치</button>
 <button id="스카이뷰버튼" onclick="panTo(35.9694467008573,126.95808664531884)">비상벨</button>
 <a href="index.html" target="_self"><button id="스카이뷰버튼">홈으로</button></a>
-</div>
+</div>-->
 </body>
 </html>
