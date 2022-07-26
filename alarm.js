@@ -253,12 +253,37 @@ window.addEventListener('scroll', () => {
 document.documentElement.style.setProperty('--vh', `${vh}px`);
 });
 
+//지도 줌에 따른 오버레이 사이즈 조절
+let overlaySizeValue = 1.1;
+let bottomValue= 55;
+document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
+document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
 
 kakao.maps.event.addListener(map, 'zoom_changed', function() {        
     
     // 지도의 현재 레벨을 얻어옵니다
     var level = map.getLevel();
     
-    
+    if (level<=3) {
+        let overlaySizeValue = 1.1;
+        let bottomValue= 55;
+        document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
+        document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
+    }
+
+    if (level==4) {
+        let overlaySizeValue = 0.7;
+        let bottomValue= 40;
+        document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
+        document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
+    }
+
+    if (level==5) {
+        let overlaySizeValue = 0.5;
+        let bottomValue= 35;
+        document.documentElement.style.setProperty('--overlaySize', `${overlaySizeValue}`);
+        document.documentElement.style.setProperty('--bottom', `${bottomValue}px`);
+    }
     
 });
+
