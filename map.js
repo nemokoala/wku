@@ -84,52 +84,52 @@ if (locationAccess==1){
 //--------------------------------------------------------
 function createMarker(a,b,name){
     aa=a; bb=b; nname=name;
-removeMarker();
+    removeMarker();
     markerPosition = new kakao.maps.LatLng(a,b);
-var marker = new kakao.maps.Marker({
+    var marker = new kakao.maps.Marker({
         map: map, // 마커를 표시할 지도
         position: markerPosition  // 마커의 위치
     })
-marker.setMap(map);
-markers.push(marker);
+    marker.setMap(map);
+    markers.push(marker);
 
-panTo(a,b);
-linkValue=name+","+a+","+b;
+    panTo(a,b);
+    linkValue=name+","+a+","+b;
 
-createOverlay();
-explainOn();
-function createOverlay(){
-    if (count>0){
-    closeOverlay();
+    createOverlay();
+    explainOn();
+
+    function createOverlay(){
+        if (count>0){
+            closeOverlay();
+        }
+
+        count+=1;
+        level=map.getLevel();
+        var content = '<div class="customoverlay">' +
+        '  <a href="https://map.kakao.com/link/to/'+linkValue+'"'+'target="_blank">' +
+        '    <span class="title">'+name+'</span>' +
+        '  </a>' +
+        '</div>';
+        
+        var position = new kakao.maps.LatLng(a,b);  
+        overlay = new kakao.maps.CustomOverlay({
+            position: position,
+            content: content,
+            yAnchor: 1 
+        });
+        overlay.setMap(map);
+    }
+    ccvalue=1;
 }
 
-count+=1;
-level=map.getLevel();
-var content = '<div class="customoverlay">' +
-    '  <a href="https://map.kakao.com/link/to/'+linkValue+'"'+'target="_self">' +
-    '    <span class="title">'+name+'</span>' +
-    '  </a>' +
-    '</div>';
-    
-    var position = new kakao.maps.LatLng(a,b);  
-    overlay = new kakao.maps.CustomOverlay({
-    position: position,
-    content: content,
-    yAnchor: 1 
-});
-overlay.setMap(map);
-}
-ccvalue=1;
-
-}
-
-kakao.maps.event.addListener(map, 'zoom_changed',function(){
+/*kakao.maps.event.addListener(map, 'zoom_changed',function(){
     ccvalue=0;
     if (count>0){
     closeOverlay();
     createMarker(aa,bb,nname);
 }
-});
+}); 줌 변경시 마커 위치 변경*/
 
 function zoomIn() {        
     // 현재 지도의 레벨을 얻어옵니다

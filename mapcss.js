@@ -38,7 +38,19 @@ function re() {
 
     if (aa>20){panTo(aa,bb);}
     let vh = window.innerHeight * 0.01;
-document.documentElement.style.setProperty('--vh', `${vh}px`);
+    document.documentElement.style.setProperty('--vh', `${vh}px`);
+    map.relayout();
+
+    if (window.innerWidth<1300){
+        document.querySelector('.main__bottomArea').style.height = 'calc(100% - '+mapHeight+'% - 30px)';
+        document.querySelector('#map').style.height = mapHeight+'%';
+    }
+    
+    if (window.innerWidth>=1300){
+        document.querySelector('.main__bottomArea').style.height = '100%'
+        document.querySelector('#map').style.height = '100%'
+    }
+
 }
 
 window.addEventListener('touchend', () => {
@@ -97,7 +109,10 @@ function resizemap() {
     //document.querySelector('.nav').style.height = 'calc(100% - (80px + '+mapHeight+'%))';
     map.relayout();
 }
-upMapHeight();
+if (window.innerWidth<1300){
+    upMapHeight();
+}
+
 setTimeout(re,500);
 
 /*var searchBtn = document.querySelectorAll('#searchButton');
@@ -134,7 +149,7 @@ document.documentElement.style.setProperty('--vh', `${vh}px`);
 
 
 setInterval(() => {
-    step();
+    //step();
 }, 500);
 function step(){
     if (document.querySelector('.nav').style.width=="150px") {
