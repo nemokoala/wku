@@ -16,13 +16,15 @@
 body {
     width:100%;
     background-color: skyblue;;
+    font-size: 0;
+    margin:0;
+    padding:0;
 }
 .backg {
     position:absolute;
-    left:10vw;
+    left:10%;
     top:5%;
-    
-    width:80vw;
+    width:80%;
     height:90%;
     background: darkblue;
     border:1px solid black;
@@ -63,25 +65,35 @@ span.top__text {
 }
 
 .bottom__buttons {
-    display:inline-block;
-    position: relative;
-    left:10%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
     top:0%;
     width: 100%;
     height:100%;
 }
 
-a > button {
-    display:inline-block;
+.bottom__buttons > a {
+    display: flex;
     width: 80%;
-    height:15%;
+    height: 15%;
+    margin: 20px 0px;
+}
+
+a > button {
+    display: flex;
+    width: 100%;
+    height:100%;
     margin-bottom:30px;
     border-radius: 40px; 
     font-size: 1.5rem; 
     box-shadow: 3px 3px 10px black; 
     background-color: white;
     font-size:1.5rem;
-    
+    align-items: center;
+    justify-content: center;
 }
 
 a > button:hover {
