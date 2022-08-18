@@ -109,9 +109,7 @@ function resizemap() {
     //document.querySelector('.nav').style.height = 'calc(100% - (80px + '+mapHeight+'%))';
     map.relayout();
 }
-if (window.innerWidth<1300){
-    upMapHeight();
-}
+
 
 setTimeout(re,500);
 
@@ -209,53 +207,33 @@ function btscroll(){
         resetbt();
         document.querySelector('.navㅊ').style.backgroundColor=btcolor;
     }
-    heightGap = buttonAreaValue.scrollHeight-(buttonAreaValue.scrollTop+buttonAreaValue.offsetHeight);
-    if (buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅍㅎ').offsetTop+document.querySelector('#ㅍㅎ').offsetTop)/2 
-        || heightGap<15){
+    if (buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅊ').offsetTop+document.querySelector('#ㅍㅎ').offsetTop)/2){
         resetbt();
         document.querySelector('.navㅍㅎ').style.backgroundColor=btcolor;
     }
-
-    /*if (window.innerWidth<1300){
-        if (buttonAreaValue.scrollTop>=0 && buttonAreaValue.scrollTop<155)
-        document.querySelector('.nav기타').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=155 && buttonAreaValue.scrollTop<330)
-        document.querySelector('.navㄱ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=330 && buttonAreaValue.scrollTop<500)
-        document.querySelector('.navㄴㄷ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=500 && buttonAreaValue.scrollTop<680)
-        document.querySelector('.navㅁㅂ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=680 && buttonAreaValue.scrollTop<965)
-        document.querySelector('.navㅅ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=965 && buttonAreaValue.scrollTop<1254)
-        document.querySelector('.navㅇ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=1254 && buttonAreaValue.scrollTop<1480)
-        document.querySelector('.navㅈ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=1480 && buttonAreaValue.scrollTop<1660)
-        document.querySelector('.navㅊ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=1660)
-        document.querySelector('.navㅍㅎ').style.backgroundColor="rgb(80, 151, 231)";
+    heightGap = buttonAreaValue.scrollHeight-(buttonAreaValue.scrollTop+buttonAreaValue.offsetHeight);
+    
+    
+    
+    if (heightGap<15 && buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅈ').offsetTop+document.querySelector('#ㅊ').offsetTop)/2){
+        resetbt();
+        document.querySelector('.navㅊ').style.backgroundColor=btcolor;
+        document.querySelector('.navㅍㅎ').style.backgroundColor=btcolor;
     }
-    if (window.innerWidth>=1300){
-        if (buttonAreaValue.scrollTop>=0 && buttonAreaValue.scrollTop<160)
-        document.querySelector('.nav기타').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=160 && buttonAreaValue.scrollTop<340)
-        document.querySelector('.navㄱ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=340 && buttonAreaValue.scrollTop<565)
-        document.querySelector('.navㄴㄷ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=565 && buttonAreaValue.scrollTop<740)
-        document.querySelector('.navㅁㅂ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=740 && buttonAreaValue.scrollTop<965)
-        document.querySelector('.navㅅ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=965 && buttonAreaValue.scrollTop<1475)
-        document.querySelector('.navㅇ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=1475 && buttonAreaValue.scrollTop<1935)
-        document.querySelector('.navㅈ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=1480 && buttonAreaValue.scrollTop<1660)
-        document.querySelector('.navㅊ').style.backgroundColor="rgb(80, 151, 231)";
-        if (buttonAreaValue.scrollTop>=1660)
-        document.querySelector('.navㅍㅎ').style.backgroundColor="rgb(80, 151, 231)";
-    }*/
+    else if (heightGap<15 && buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅇ').offsetTop+document.querySelector('#ㅈ').offsetTop)/2){
+        resetbt();
+        document.querySelector('.navㅈ').style.backgroundColor=btcolor;
+        document.querySelector('.navㅊ').style.backgroundColor=btcolor;
+        document.querySelector('.navㅍㅎ').style.backgroundColor=btcolor;
+    }
+    else if (heightGap<15 && buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅅ').offsetTop+document.querySelector('#ㅇ').offsetTop)/2 
+    && buttonAreaValue.offsetTop+buttonAreaValue.scrollTop<(document.querySelector('#ㅇ').offsetTop+document.querySelector('#ㅈ').offsetTop)/2){
+        resetbt();
+        document.querySelector('.navㅇ').style.backgroundColor=btcolor;
+        document.querySelector('.navㅈ').style.backgroundColor=btcolor;
+        document.querySelector('.navㅊ').style.backgroundColor=btcolor;
+        document.querySelector('.navㅍㅎ').style.backgroundColor=btcolor;
+    }
 }
 
 function resetbt(){
