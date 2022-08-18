@@ -165,7 +165,7 @@ document.querySelector('#satelliteMap').addEventListener("click",function(){
     document.querySelector('#normalMap').style.backgroundColor = "rgb(38, 35, 194)";
     document.querySelector('#satelliteMap').style.backgroundColor = "rgb(255, 122, 144)";
 });
-
+let heightGap;
 let buttonAreaValue = document.querySelector('.buttonArea');
 document.querySelector('.nav기타').style.backgroundColor="rgb(80, 151, 231)";
 buttonAreaValue.addEventListener('scroll',btscroll);
@@ -209,8 +209,9 @@ function btscroll(){
         resetbt();
         document.querySelector('.navㅊ').style.backgroundColor=btcolor;
     }
+    heightGap = buttonAreaValue.scrollHeight-(buttonAreaValue.scrollTop+buttonAreaValue.offsetHeight);
     if (buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅍㅎ').offsetTop+document.querySelector('#ㅍㅎ').offsetTop)/2 
-        || buttonAreaValue.scrollTop+buttonAreaValue.offsetHeight==buttonAreaValue.scrollHeight){
+        || heightGap<15){
         resetbt();
         document.querySelector('.navㅍㅎ').style.backgroundColor=btcolor;
     }
