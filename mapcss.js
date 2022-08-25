@@ -51,6 +51,7 @@ function re() {
     }
     map.relayout();
     if (aa>20){panTo(aa,bb);}
+    navArrowBtnSetPosition();
 }
 
 window.addEventListener('touchend', () => {
@@ -80,6 +81,7 @@ function upMapHeight(){
             //document.querySelector('.mapSizeBtn').style.top = 'calc((45% + '+mapSizeBtnValue+'%) + 15px)';
             resizemap();
             heightCount+=1;
+            navArrowBtnSetPosition();
         }
 
     } 
@@ -97,6 +99,7 @@ function downMapHeight(){
             //document.querySelector('.mapSizeBtn').style.top = 'calc((45% + '+mapSizeBtnValue+'%) + 15px)';
             resizemap();
             heightCount+=1;
+            navArrowBtnSetPosition();
         }
 
     }
@@ -207,15 +210,16 @@ function btscroll(){
         resetbt();
         document.querySelector('.navㅊ').style.backgroundColor=btcolor;
     }
+    heightGap = buttonAreaValue.scrollHeight-(buttonAreaValue.scrollTop+buttonAreaValue.offsetHeight);
     if (buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅊ').offsetTop+document.querySelector('#ㅍㅎ').offsetTop)/2){
         resetbt();
         document.querySelector('.navㅍㅎ').style.backgroundColor=btcolor;
     }
-    heightGap = buttonAreaValue.scrollHeight-(buttonAreaValue.scrollTop+buttonAreaValue.offsetHeight);
     
     
     
-    if (heightGap<15 && buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅈ').offsetTop+document.querySelector('#ㅊ').offsetTop)/2){
+    
+    else if (heightGap<15 && buttonAreaValue.offsetTop+buttonAreaValue.scrollTop>(document.querySelector('#ㅈ').offsetTop+document.querySelector('#ㅊ').offsetTop)/2){
         resetbt();
         document.querySelector('.navㅊ').style.backgroundColor=btcolor;
         document.querySelector('.navㅍㅎ').style.backgroundColor=btcolor;
@@ -242,3 +246,45 @@ function resetbt(){
         btAll[i].style.backgroundColor="rgb(57, 135, 224)"
     }
 }
+
+let upBtY, upBtWidth, upBtHeight, downBtY, downBtWidth, downBtHeight;
+
+document.querySelector('.nav').addEventListener('scroll',navArrowBtnSetPosition);
+
+function navArrowBtnSetPosition() {
+    
+    if(document.querySelector('.nav').scrollTop>5){
+        document.querySelector('.navUpArrow').style.zIndex = 1;  
+    }
+    if(document.querySelector('.nav').scrollTop<=5){
+        document.querySelector('.navUpArrow').style.zIndex = -1;   
+    }
+    if((document.querySelector('.nav').scrollTop+document.querySelector('.nav').offsetHeight)<document.querySelector('.nav').scrollHeight){
+        document.querySelector('.navDownArrow').style.zIndex = 1;  
+    }
+    else {
+        document.querySelector('.navDownArrow').style.zIndex = -1;  ;  
+    }
+
+    upBtY = document.querySelector('.nav기타').offsetTop;
+    upBtWidth = document.querySelector('.nav기타').offsetWidth;
+    upBtHeight = document.querySelector('.nav기타').offsetHeight;
+    document.querySelector('.navUpArrow').style.top = `${upBtY}px`;
+    document.querySelector('.navUpArrow').style.width = `${upBtWidth}px`;
+    document.querySelector('.navUpArrow').style.height = `${upBtHeight}px`;
+
+    downBtWidth = document.querySelector('.navㅍㅎ').offsetWidth;
+    downBtHeight = document.querySelector('.navㅍㅎ').offsetHeight;
+    document.querySelector('.navDownArrow').style.top = `${downBtY}px`;
+    document.querySelector('.navDownArrow').style.width = `${downBtWidth}px`;
+    document.querySelector('.navDownArrow').style.height = `${downBtHeight}px`;
+    downBtY = window.innerHeight-downBtHeight;
+}
+
+navArrowBtnSetPosition();
+
+document.addEventListener('keydown',function(e){
+    if (e.code == 'Space'){
+        alert(opa);
+    }
+})
