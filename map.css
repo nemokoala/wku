@@ -94,11 +94,13 @@ body {
     margin: 0px 5px;
     border-radius: 7px;
     box-sizing: border-box;
+    transition: all 0.5s;
 }
 
 .firstLine__btns div:hover {
     background: skyblue;
     color: white;
+    transition: all 0.5s;
 }
 
 .firstLine__btns a {
@@ -127,10 +129,12 @@ body {
     padding: 5px 10px 4px 10px;
     color: white;
     border-radius: 7px;
+    transition: all 0.5s;
 }
 
 .secondLine_activeBtn:hover {
     background:rgb(124, 184, 252) !important;
+    transition: all 0.5s;
 }
 
 .section {
