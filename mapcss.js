@@ -259,7 +259,7 @@ function navArrowBtnSetPosition() {
     if(document.querySelector('.nav').scrollTop<=5){
         document.querySelector('.navUpArrow').style.zIndex = -1;   
     }
-    if((document.querySelector('.nav').scrollTop+document.querySelector('.nav').offsetHeight)<document.querySelector('.nav').scrollHeight){
+    if((document.querySelector('.nav').scrollTop+document.querySelector('.nav').offsetHeight+5)<document.querySelector('.nav').scrollHeight){
         document.querySelector('.navDownArrow').style.zIndex = 1;  
     }
     else {
