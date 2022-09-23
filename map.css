@@ -133,6 +133,7 @@ body {
 }
 
 .secondLine_activeBtn:hover {
+    cursor: pointer;
     background:rgb(124, 184, 252) !important;
     transition: all 0.5s;
 }
@@ -224,6 +225,7 @@ body {
     align-items: center;
     text-align: center;
     padding: 10px;
+    cursor: pointer;
 }
 
 .buttonArea div:hover {
