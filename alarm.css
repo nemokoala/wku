@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&family=Nanum+Gothic&family=Sunflower:wght@500&display=swap');
+
+*::-webkit-scrollbar {
+display: none; /* Chrome */
+}
+
+
+
+html {
+    margin: 0;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+}
+@media screen and (max-width: 350px) {
+    html {
+        font-size: 11px;
+    }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    font-size: 0;
+    background: whitesmoke;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-weight: bold;
+    height: calc(var(--vh, 1vh) * 100);
+}
+
+a {
+    text-decoration: none;
+}
+
+.customoverlay {
+    /*--overlaySize: 1.1;
+    --bottom: 55px;*/
+    position:relative;bottom:var(--bottom);border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left; transform: scale(var(--overlaySize),var(--overlaySize));
+}
+.customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+.customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+.customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+.customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+
+.explainArea {
+    animation-name: first;
+    animation-duration: 7s;background:#d95050; border:black 1px solid; 
+    position: fixed; width:80vw; padding: 20px 13px; font-size:1.2rem;  
+    vertical-align: middle; left:10vw; top:10%; z-index:300; 
+    border-radius:10px; display:none; justify-content: center ; 
+    align-items: center; color:white;  text-align: center; box-sizing: border-box;
+}
+
+@keyframes first {
+    0% { transform: scale(0,0); }
+    10% { transform: scale(1.15,1.15); }
+    20% { transform: scale(1,1); }
+    70% { transform: scale(1,1); filter: opacity(1); }
+    100% {filter: opacity(0); }
+}
+
+/*pc*//*pc*//*pc*//*pc*//*pc*//*pc*//*pc*//*pc*//*pc*//*pc*//*pc*//*pc*/
+/*@media (min-width: 1101px){
+.customoverlay {position:relative;bottom:55px;border-radius:6px;border: 1px solid #ccc;border-bottom:2px solid #ddd;float:left; transform: scale(1.1,1.1);}
+.customoverlay:nth-of-type(n) {border:0; box-shadow:0px 1px 2px #888;}
+.customoverlay a {display:block;text-decoration:none;color:#000;text-align:center;border-radius:6px;font-size:14px;font-weight:bold;overflow:hidden;background: #d95050;background: #d95050 url(https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/arrow_white.png) no-repeat right 14px center;}
+.customoverlay .title {display:block;text-align:center;background:#fff;margin-right:35px;padding:10px 15px;font-size:14px;font-weight:bold;}
+.customoverlay:after {content:'';position:absolute;margin-left:-12px;left:50%;bottom:-12px;width:22px;height:12px;background:url('https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/vertex_white.png')}
+
+#모드버튼{display: inline-block;position: fixed;  width: 800px; left: 15px; top: 10px; z-index: 25; }
+#지도버튼 {color: black; white-space: nowrap;  width: 100px; height: 50px; font-size: 1.2em;  border-radius: 40px; border-color: white;background: white; left: 3%;  box-shadow: 3px 3px 10px black;}
+#스카이뷰버튼 {color: black; white-space: nowrap; width: 100px; height: 50px; left: 20px; font-size: 1.2em;  border-radius: 40px; border-color: white;background: white; left: 3%;  box-shadow: 3px 3px 10px black;}
+#지도버튼:hover {background-color: skyblue;}
+#스카이뷰버튼:hover {background-color: skyblue;}
+#지도버튼:active {background-color: #43FA8F;}
+#스카이뷰버튼:active {background-color: #43FA8F;}
+.explainArea {animation-name: first;
+animation-duration: 9s;background:#d95050; border:black 1px solid; position: fixed; min-width:780px;width:50vw; height:60px; font-size:30px;  vertical-align: middle; left:25vw; top:8vh; z-index:300; 
+border-radius:10px; display:flex; justify-content: center ; align-items: center; color:white;}
+}
+/*==================== 공통 =================*/
+
+
+.header {
+    width: 100%;
+    height: 80px;
+    background: white;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.header__firstLine {
+    height: 50%;
+    background: rgb(245, 245, 245);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+}
+.logo {
+    width: 25%;
+    padding: 8px 10px 5px 20px;
+    font-family: 'Sunflower', sans-serif;
+    font-weight: bold;
+    font-size: 1.5rem;
+    font-style: oblique;
+    box-sizing: border-box;
+}
+.firstLine__btns {
+    width: 85%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    padding: 0;
+    margin: 0 10px 0 0;
+    box-sizing: border-box;
+}
+
+.firstLine__btns div {
+    color: black;
+    padding: 5px 10px 5px 10px;
+    margin: 0px 5px;
+    border-radius: 7px;
+    box-sizing: border-box;
+}
+
+.firstLine__btns div:hover {
+    background: skyblue;
+    color: white;
+}
+
+.firstLine__btns a {
+    text-decoration: none;
+}
+
+.header__secondLine{
+    overflow-x: scroll;
+}
+
+.header__secondLine {
+    width: 100%;
+    height: 50%;
+    background: rgb(38, 35, 194);
+    box-sizing: border-box;
+}
+
+.secondLine__btns {
+    width: calc(100% - 10px);
+    height: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 10px;
+}
+
+.secondLine__btns div {
+    display: flex;
+    padding: 5px 10px 4px 10px;
+    color: white;
+    border-radius: 7px;
+    white-space: nowrap;
+}
+
+.secondLine_activeBtn:hover {
+    background:rgb(124, 184, 252) !important;
+}
+
+#map {
+    width: 100%;
+    height: calc(100% - 80px);
+    z-index: 1;
+    margin: 0;
+}
