@@ -1,0 +1,431 @@
+[
+  {
+    "id": "기타버튼",
+    "name": "기타",
+    "coordinates": [],
+    "description": "(구)생활과학대학"
+  },
+  {
+    "id": "생활과학대학",
+    "coordinates": [35.970154, 126.953914],
+    "description": "(구)생활과학대학"
+  },
+  {
+    "id": "제2미술관",
+    "coordinates": [35.9675893, 126.9532931],
+    "description": "(구)제2미술관"
+  },
+  {
+    "id": "(구)평생교육원",
+    "coordinates": [35.9667007, 126.961209],
+    "description": "(구)평생교육원"
+  },
+  {
+    "id": "60주년기념관(평생교육원)",
+    "coordinates": [35.9658951, 126.9544319],
+    "description": "60주년기념관(평생교육원)"
+  },
+  {
+    "id": "WM관",
+    "coordinates": [35.970359, 126.954892],
+    "description": "WM관"
+  },
+  { "id": "targetㄱ", "name": "ㄱ", "coordinates": [], "description": "ㄱ" },
+  {
+    "id": "개벽관",
+    "coordinates": [35.972862, 126.957126],
+    "description": "개벽관"
+  },
+  {
+    "id": "경영대학",
+    "coordinates": [35.9709974, 126.9575541],
+    "description": "경영대학"
+  },
+  {
+    "id": "경영대학 신관",
+    "coordinates": [35.970693, 126.95785],
+    "description": "경영대학 신관"
+  },
+  {
+    "id": "공공정책대학",
+    "coordinates": [35.9688115, 126.9563206],
+    "description": "공공정책대학"
+  },
+  {
+    "id": "교학대학",
+    "coordinates": [35.970788422957426, 126.95524608542802],
+    "description": "교학대학"
+  },
+  {
+    "id": "글로벌교류센터",
+    "coordinates": [35.972075, 126.957516],
+    "description": "글로벌교류센터"
+  },
+  {
+    "id": "targetㄴ,ㄷ",
+    "name": "ㄴ,ㄷ",
+    "coordinates": [],
+    "description": "ㄴ,ㄷ"
+  },
+  {
+    "id": "남문",
+    "coordinates": [35.964432, 126.957753],
+    "description": "남문"
+  },
+  {
+    "id": "노천극장",
+    "coordinates": [35.967694, 126.954815],
+    "description": "노천극장"
+  },
+  {
+    "id": "농식품융합대학",
+    "coordinates": [35.968953, 126.960735],
+    "description": "농식품융합대학"
+  },
+  {
+    "id": "대운동장",
+    "coordinates": [35.9703391, 126.9600979],
+    "description": "대운동장"
+  },
+  {
+    "id": "대학본관",
+    "coordinates": [35.969029, 126.953782],
+    "description": "대학본관"
+  },
+  {
+    "id": "대학본관 창고",
+    "coordinates": [35.9690862307508, 126.95315912468206],
+    "description": "대학본관 창고"
+  },
+  {
+    "id": "도예관",
+    "coordinates": [35.971903, 126.959701],
+    "description": "도예관"
+  },
+  {
+    "id": "동문",
+    "coordinates": [35.971086, 126.963513],
+    "description": "동문"
+  },
+  {
+    "id": "targetㅁ,ㅂ",
+    "name": "ㅁ,ㅂ",
+    "coordinates": [],
+    "description": "ㅁ,ㅂ"
+  },
+  {
+    "id": "문화체육관 ",
+    "coordinates": [35.9652244101743, 126.95725322152686],
+    "description": "문화체육관"
+  },
+  {
+    "id": "문화체육관 별관",
+    "coordinates": [35.965504, 126.957871],
+    "description": "문화체육관 별관"
+  },
+  {
+    "id": "물품보관창고",
+    "coordinates": [35.9719449, 126.960104],
+    "description": "물품보관창고"
+  },
+  {
+    "id": "박물관",
+    "coordinates": [35.966275, 126.956642],
+    "description": "박물관"
+  },
+  {
+    "id": "법학전문대학원",
+    "coordinates": [35.97028040493238, 126.95640886254265],
+    "description": "법학전문대학원"
+  },
+  {
+    "id": "보은관",
+    "coordinates": [35.972345, 126.957738],
+    "description": "보은관"
+  },
+  { "id": "targetㅅ", "name": "ㅅ", "coordinates": [], "description": "ㅅ" },
+  {
+    "id": "사범대학",
+    "coordinates": [35.967331, 126.960978],
+    "description": "사범대학"
+  },
+  {
+    "id": "사범대학 부속유치원",
+    "coordinates": [35.967171, 126.962004],
+    "description": "사범대학 부속유치원"
+  },
+  {
+    "id": "사은관",
+    "coordinates": [35.973436, 126.957713],
+    "description": "사은관"
+  },
+  {
+    "id": "사회과학대학",
+    "coordinates": [35.9713667, 126.957126],
+    "description": "사회과학대학"
+  },
+  {
+    "id": "사회과학대학 신관",
+    "coordinates": [35.971367769020965, 126.95769557297643],
+    "description": "사회과학대학 신관"
+  },
+  {
+    "id": "삼동관",
+    "coordinates": [35.972387, 126.957014],
+    "description": "삼동관"
+  },
+  {
+    "id": "새천년관",
+    "coordinates": [35.970602, 126.958703],
+    "description": "새천년관"
+  },
+  {
+    "id": "서문",
+    "coordinates": [35.970415, 126.953682],
+    "description": "서문"
+  },
+  {
+    "id": "소방행정관",
+    "coordinates": [35.97183, 126.957099],
+    "description": "소방행정관"
+  },
+  {
+    "id": "소운동장",
+    "coordinates": [35.969368, 126.958188],
+    "description": "소운동장"
+  },
+  {
+    "id": "수덕호(봉황각)",
+    "coordinates": [35.96951466493556, 126.95594077910494],
+    "description": "수덕호(봉황각)"
+  },
+  {
+    "id": "숭산기념관(대학교당)",
+    "coordinates": [35.96683150288698, 126.95476937559411],
+    "description": "숭산기념관(대학교당)"
+  },
+  {
+    "id": "스포츠과학관",
+    "coordinates": [35.968084, 126.955268],
+    "description": "스포츠과학관"
+  },
+  {
+    "id": "승리관",
+    "coordinates": [35.971301, 126.960896],
+    "description": "승리관"
+  },
+  {
+    "id": "시외통학버스 승강장",
+    "coordinates": [35.971181, 126.961602],
+    "description": "시외통학버스 승강장"
+  },
+  { "id": "targetㅇ", "name": "ㅇ", "coordinates": [], "description": "ㅇ" },
+  {
+    "id": "야구장",
+    "coordinates": [35.969441, 126.957743],
+    "description": "야구장"
+  },
+  {
+    "id": "약학대학",
+    "coordinates": [35.96692273946659, 126.95956516947584],
+    "description": "약학대학"
+  },
+  {
+    "id": "외국어학습관",
+    "coordinates": [35.973814, 126.957513],
+    "description": "외국어학습관"
+  },
+  {
+    "id": "용화관",
+    "coordinates": [35.972166, 126.956986],
+    "description": "용화관"
+  },
+  {
+    "id": "원광대학교 병원",
+    "coordinates": [35.9643315, 126.9596541],
+    "description": "원광대학교 병원"
+  },
+  {
+    "id": "원광대학교 한방병원",
+    "coordinates": [35.9648512, 126.9586276],
+    "description": "원광대학교 한방병원"
+  },
+  {
+    "id": "원광대학교병원 응급의료센터",
+    "coordinates": [35.965864457715924, 126.96058886786142],
+    "description": "원광대학교병원 응급의료센터"
+  },
+  {
+    "id": "원광대학교병원 장례문화원",
+    "coordinates": [35.96462704340448, 126.96316853193935],
+    "description": "원광대학교병원 장례문화원"
+  },
+  {
+    "id": "원광디지털대학교",
+    "coordinates": [35.9712834, 126.9563483],
+    "description": "원광디지털대학교"
+  },
+  {
+    "id": "원광문화센터",
+    "coordinates": [35.964126, 126.9579048],
+    "description": "원광문화센터"
+  },
+  {
+    "id": "원체육관",
+    "coordinates": [35.968256, 126.9549874],
+    "description": "원체육관"
+  },
+  {
+    "id": "의과대학",
+    "coordinates": [35.965750668040364, 126.95931570264985],
+    "description": "의과대학"
+  },
+  {
+    "id": "인문대학",
+    "coordinates": [35.9712557, 126.9587092],
+    "description": "인문대학"
+  },
+  {
+    "id": "원광대학교 동물사육장",
+    "coordinates": [35.9663396, 126.9593203],
+    "description": "원광대학교 동물사육장"
+  },
+  { "id": "targetㅈ", "name": "ㅈ", "coordinates": [], "description": "ㅈ" },
+  {
+    "id": "자동차실습관",
+    "coordinates": [35.968293, 126.960129],
+    "description": "자동차실습관"
+  },
+  {
+    "id": "자연과학대학",
+    "coordinates": [35.9677005, 126.9592925],
+    "description": "자연과학대학"
+  },
+  {
+    "id": "자연식물원",
+    "coordinates": [35.9695221, 126.9635351],
+    "description": "자연식물원"
+  },
+  {
+    "id": "정문",
+    "coordinates": [35.967366, 126.953657],
+    "description": "정문"
+  },
+  {
+    "id": "제2사회관",
+    "coordinates": [35.971353, 126.957697],
+    "description": "제2사회관"
+  },
+  {
+    "id": "제2운동장",
+    "coordinates": [35.969294, 126.958792],
+    "description": "제2운동장"
+  },
+  {
+    "id": "제2치학관",
+    "coordinates": [35.9649017, 126.9618719],
+    "description": "제2치학관"
+  },
+  {
+    "id": "제생의세관",
+    "coordinates": [35.96624974402721, 126.95971340224573],
+    "description": "제생의세관"
+  },
+  {
+    "id": "조소관",
+    "coordinates": [35.9715057, 126.9598757],
+    "description": "조소관"
+  },
+  {
+    "id": "조소관 별관",
+    "coordinates": [35.97172538850059, 126.96023342594573],
+    "description": "조소관 별관"
+  },
+  {
+    "id": "조형예술디자인대학",
+    "coordinates": [35.9703391, 126.9574871],
+    "description": "조형예술디자인대학(미술대학)"
+  },
+  {
+    "id": "중앙도서관",
+    "coordinates": [35.9702607, 126.9553666],
+    "description": "중앙도서관"
+  },
+  { "id": "targetㅊ", "name": "ㅊ", "coordinates": [], "description": "ㅊ" },
+  {
+    "id": "창업보육센터(무빙테크노관)",
+    "coordinates": [35.969900081007495, 126.9613675448565],
+    "description": "창업 보육센터"
+  },
+  {
+    "id": "창의공과대학",
+    "coordinates": [35.9678672, 126.9581537],
+    "description": "창의공과대학"
+  },
+  {
+    "id": "창의공과대학 U.T.M실",
+    "coordinates": [35.9682608, 126.959941],
+    "description": "창의공과대학 U.T.M실"
+  },
+  {
+    "id": "창의공과대학 기계공작실",
+    "coordinates": [35.9684782, 126.9599869],
+    "description": "창의공과대학 기계공작실"
+  },
+  {
+    "id": "청운관",
+    "coordinates": [35.9730888, 126.9578481],
+    "description": "청운관"
+  },
+  {
+    "id": "치과대학",
+    "coordinates": [35.9650342, 126.9606814],
+    "description": "치과대학"
+  },
+  {
+    "id": "치과대학 치과병원",
+    "coordinates": [35.96484146809018, 126.96191263435942],
+    "description": "치과대학 치과병원"
+  },
+  {
+    "id": "targetㅍ,ㅎ",
+    "name": "ㅍ,ㅎ",
+    "coordinates": [],
+    "description": "ㅍ,ㅎ"
+  },
+  {
+    "id": "프라임관",
+    "coordinates": [35.9684744, 126.9579818],
+    "description": "프라임관"
+  },
+  {
+    "id": "학군단",
+    "coordinates": [35.9719222, 126.9588202],
+    "description": "학군단"
+  },
+  {
+    "id": "학림관",
+    "coordinates": [35.9726999, 126.9561816],
+    "description": "학림관"
+  },
+  {
+    "id": "학생지원관",
+    "coordinates": [35.9697237, 126.9545952],
+    "description": "학생지원관"
+  },
+  {
+    "id": "학생회관",
+    "coordinates": [35.9678671, 126.9560984],
+    "description": "학생회관"
+  },
+  {
+    "id": "한의과대학",
+    "coordinates": [35.964964, 126.958653],
+    "description": "한의과대학"
+  },
+  {
+    "id": "한의학전문대학원",
+    "coordinates": [35.9652841, 126.9586815],
+    "description": "한의학전문대학원"
+  }
+]
